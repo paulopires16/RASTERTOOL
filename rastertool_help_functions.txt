@@ -1,0 +1,186 @@
+help function from rastertool
+
+Func: bmp2jpeg 
+Desc: converte BMP em JPG 
+Parm: bmp2jpeg jpegquality bmpfile 
+
+Func: changeresolution 
+Desc: altera a resolucao do raster 
+Parm: changeresolution tifnumber tiffile resolution 
+
+Func: checkqrisbncode 
+Desc: check ISBN e QRCODE (abre browser para validacao) 
+Parm: checkqrisbncode tifnumber tiffile 
+
+Func: checktext 
+Desc: extrai texto da imagem 
+Parm: checktext tiffile 
+
+Func: cliptif 
+Desc: efetua o corte/clip do raster (cliptype: MAP/EXT/PLA/COORD/DES/QRISBN e qualquer conjugacao N,S,E,O) 
+Parm: cliptif tifnumber cliptype tiffile 
+
+Func: cmyk2index 
+Desc: converte CMYK em INDEX COLOR 
+Parm: cmyk2index tifnumber, tiffile 
+
+Func: cmyk2rgb 
+Desc: converte CMYK em RGB 
+Parm: cmyk2rgb tiffile 
+
+Func: createborderextpixel 
+Desc: cria um pixel extra a todo o tif e copia valor do pixel vizinho 
+Parm: createborderextpixel tifnumber tiffile 
+
+Func: createcmykmap 
+Desc: cria o TIFCMYK_MAP a partir do TIF_MAP 
+Parm: createcmykmap tifnumber tiffile 
+
+Func: createcompress 
+Desc: comprime o TIF pelo metodo LZW 
+Parm: createcompress tiffile 
+
+Func: createmetafile 
+Desc: cria o ficheiro met 
+Parm: createmetafile tiffile tifnumber tifserie tifano tifedicao 
+
+Func: createmetatif 
+Desc: cria metadados dentro do geotif 
+Parm: createmetatif tiffile tifnumber tifserie tifano tifedicao 
+
+Func: createmirror 
+Desc: cria espelgo da imagem (FLIP_LEFT_RIGHT / FLIP_TOP_BOTTOM) 
+Parm: createmirror mirroroption tiffile 
+
+Func: createmosaic 
+Desc: cria o mosaico do conjunto dos tifs (tem que ter tfw) 
+Parm: createmosaic tiffile1 tiffile2 tiffile3 ... 
+
+Func: createresize 
+Desc: redimensiona a imagem pela largura (basewidth) 
+Parm: createresize basewidth tiffile 
+
+Func: createrotation 
+Desc: roda a imagem segundo angulo (rotangle: 90/180/270) 
+Parm: createrotation rotangle tiffile 
+
+Func: createtabfile 
+Desc: cria o ficheiro tab 
+Parm: createtabfile tiffile 
+
+Func: createtfw 
+Desc: cria o tfw do raster (tiftype: map/ext) 
+Parm: createtfw tifnumber tiftype tiffile 
+
+Func: createtransparency 
+Desc: cria transparencia no codigo de cores digitado (ex. 255,255,255) 
+Parm: createtransparency tiffile rgb/cmykcolor 
+
+Func: createwatermark 
+Desc: cria marca de agua CIGeoE 
+Parm: createwatermark    tiffile 
+
+Func: geotif2tfw 
+Desc: converte geotif em raster com tfw 
+Parm: geotif2tfw tiffile 
+
+Func: grayscale2bitmap 
+Desc: converte GRAYSCALE em BITMAP 
+Parm: grayscale2bitmap tiffile 
+
+Func: imagedifferences 
+Desc: cria uma imagem com as diferencas 
+Parm: imagedifferences tiffile1 tiffile2 
+
+Func: imgmerge 
+Desc: merge horizontalmente 2 ou mais imagens com nome igual ate ultimo '_' 
+Parm: imgmerge imgdir 
+
+Func: imgresize 
+Desc: redimensiona uma imagem para os parametros(width, height) digitados 
+Parm: imgresize imgdir width height 
+
+Func: imgscale 
+Desc: escala uma imagem para o parametro(width) digitado 
+Parm: imgscale imgdir    width 
+
+Func: index2grayscale 
+Desc: converte INDEX COLOR em GRAYSCALE 
+Parm: index2grayscale tiffile 
+
+Func: index2rgb 
+Desc: converte INDEX COLOR em RGB 
+Parm: index2rgb tiffile 
+
+Func: inverttif 
+Desc: inverte tabela de cores do raster 
+Parm: inverttif tiffile 
+
+Func: jpeg2tif 
+Desc: converte JPEG em TIF 
+Parm: jpeg2tif tiffile 
+
+Func: mergechannels 
+Desc: junta bandas CMYK 
+Parm: mergechannels cyantiffile magentatiffile yellowtiffile blacktiffile 
+
+Func: metaband2pixel 
+Desc: altera o valor do variavel "INTERLEAVE" para PIXEL (para acesso todos softwares) 
+Parm: metaband2pixel tiffile 
+
+Func: readhiddentext 
+Desc: leitura do texto hidden numa imagem. Necessaria password para o hash SHA-256 de 128 bit (passw2SHA256) e password para o algoritmo digest (passw2digest) 
+Parm: readhiddentext rgbtiffile passw2SHA256 passw2digest 
+
+Func: removenodata 
+Desc: remove valor 'nodata' 
+Parm: removenodata tiffile 
+
+Func: renamefiles 
+Desc: renomeia ficheiro ou ficheiros numa diretoria substituindo o oldtext pelo newtext 
+Parm: renamefiles dirorfile oldtext newtext 
+
+Func: rgb2cmyk 
+Desc: converte RGB em CMYK 
+Parm: rgb2cmyk tiffile 
+
+Func: rgb2index 
+Desc: converte RGB em INDEX COLOR 
+Parm: rgb2index tifnumber, tiffile 
+
+Func: shppoly2tif 
+Desc: converte uma shapefile em tif com transparencia (istransparent), color fundo (bgColor), cor linha exterior (outlineColor), cor preenchmento (fillColor), tamanho pixel (pixelSize) e epsg 
+Parm: shppoly2tif tiffile istransparent, bgColor, outlineColor, fillColor, pixelSize=1, epsg=None 
+
+Func: splitchannels 
+Desc: separa bandas CMYK 
+Parm: splitchannels tiffile 
+
+Func: tfw2geotif 
+Desc: converte raster com tfw em geotif 
+Parm: tfw2geotif tiffile epsg 
+
+Func: tif2jpg 
+Desc: converte TIF em JPG 
+Parm: tif2jpg jpegquality tiffile 
+
+Func: tif2kml 
+Desc: converte TIF(WGS84) em KML 
+Parm: tif2kml tiffile 
+
+Func: tif2shp 
+Desc: converte um tif em shapefile 
+Parm: tif2shp tiffile 
+
+Func: tifinfo 
+Desc: obtem informacao do raster, por bandas de cor 
+Parm: tifinfo tiffile 
+
+Func: writehiddentext 
+Desc: escreve um texto (hiddentext) protegido numa imagem (tiffile). Necessaria password para o hash SHA-256 de 128 bit (passw2SHA256) e password para o algoritmo digest (passw2digest) 
+Parm: writehiddentext rgbtiffile passw2SHA256 passw2digest hiddentext 
+
+
+...Done!
+
+Tempo de execucao: 0:00:04.926000
